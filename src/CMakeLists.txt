@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.21)
 
 project(Video_Processing_Framework)
 
+option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
+
 option(TRACK_TOKEN_ALLOCATIONS "Debug memory allocations within VPF" FALSE )
 
 if(TRACK_TOKEN_ALLOCATIONS)
@@ -22,7 +24,5 @@ find_path(
 )
 set(TC_FFMPEG_ROOT "${TC_FFMPEG_ROOT_HINT}" CACHE PATH "Where to find ffmpeg" PARENT_SCOPE)
 
-add_subdirectory(PyNvCodec)
 # TODO: rename TC to NvCodec or something more descriptive
 add_subdirectory(TC)
-#add_subdirectory(PytorchNvCodec)

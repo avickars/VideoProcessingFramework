@@ -198,3 +198,6 @@ if(HAS_BSF)
     target_compile_definitions(TC PUBLIC -DHAS_BSF=1)
 endif()
 message(STATUS "HAS_BSF=${HAS_BSF}")
+
+install(TARGETS TC DESTINATION lib/vpf/TC)
+install(DIRECTORY "${PROJECT_SOURCE_DIR}/inc/" DESTINATION include/vpf/tc)

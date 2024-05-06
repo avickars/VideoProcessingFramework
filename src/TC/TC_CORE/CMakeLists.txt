@@ -37,4 +37,5 @@ set_property(
         ON
 )
 
-#install(TARGETS TC_CORE) # must be installed when shared library
+install(TARGETS TC_CORE DESTINATION lib/vpf/tc)
+install(DIRECTORY "${PROJECT_SOURCE_DIR}/inc/" DESTINATION include/vpf/tc)
